@@ -13,7 +13,7 @@ process.stdin.on('end', function(){
 });
 
 process.stdin.on('SIGTERM', function(){
-    process.stderr.write('SIGTERM!\n');
+    process.stderr.write('Why are you tring to terminate me? :-)');
 });
 
 
