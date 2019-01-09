@@ -8,7 +8,7 @@ var handler = function (req, res) {
             res.writeHead(500);
             return res.end('Error loading index.html');
         }
-        
+
         res.writeHead(200);
         res.end(data);
     });
@@ -16,6 +16,7 @@ var handler = function (req, res) {
 
 var app = http.createServer(handler);
 var io = socketio.listen(app);
+
 
 io.sockets.on('connection', function (socket) {
     setInterval(function () {
